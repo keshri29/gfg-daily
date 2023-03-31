@@ -1,0 +1,23 @@
+class Solution
+{
+    public:
+    int countSubstring(string S)
+    {
+        // code here
+        unordered_map<int,int>m;
+        int res=0;
+        int r=S.size();
+        int cnt=0;
+        for(int i=0; i<r; i++){
+            if(S[i]>='A' && S[i]<='Z')cnt++;
+            else cnt--;
+            if(cnt==0)res++;
+            if(m.find(cnt)!= m.end())
+            {
+               res+=m[cnt];
+            }
+             m[cnt]++;
+        }
+        return res;
+    }
+};
