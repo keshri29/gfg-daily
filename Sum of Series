@@ -1,0 +1,13 @@
+class Solution{
+public:
+	// function to return sum of 1, 2, ... n
+long long seriesSum(int n) {
+if (n % 2 == 0){
+return n/2 * 1ll * (n+1);
+}
+else{
+return ((n+1)/2) * 1LL * n;
+}
+}
+// } Driver Code Ends
+};
